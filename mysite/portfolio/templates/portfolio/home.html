@@ -1,0 +1,16 @@
+
+{% extends 'portfolio/base.html' %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+{% block content %}
+    
+    {% for diploma in diploms %}
+        <img src="{{diploma.file.url}}">
+        
+        <h2>{{diploma.title}}</h2>
+        <hr>
+    {% endfor %}
+{% endblock %}
+
